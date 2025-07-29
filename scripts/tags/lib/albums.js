@@ -38,6 +38,17 @@ module.exports = ctx => function(args) {
         el += `</div>`
         el += `</a>`
         el += `</div>`
+      } else {
+        el += `<div class="grid-cell album-card">`
+        // el += `<a class="card-link" target="_blank" rel="external nofollow noopener noreferrer" href="${item.url}">`
+        el += `<img src="${item.cover || item.icon || item.avatar || ctx.theme.config.default.cover}" onerror="javascript:this.removeAttribute(&quot;data-src&quot;);this.src=&quot;${ctx.theme.config.default.cover}&quot;;"/>`
+        el += `<div class="image-meta">`
+        if (item.title) {
+          el += `<span class="image-caption">${item.title}</span>`
+        }
+        el += `</div>`
+        el += `</a>`
+        el += `</div>`
       }
     }
     el += `</div>`
