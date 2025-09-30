@@ -36,8 +36,20 @@ details.folding
       line-height: 1
 
 
+// details.folding summary:hover
+details.folding
+  transition: all .28s
+
+details.folding>div.body
+  transition: all .3s
+  
+details.folding[open]>div.body
+  transition: all .3s
+
 details.folding[open]
   >summary
+    border-bottom-left-radius: 0
+    border-bottom-right-radius: 0
     color: var(--text-p1)
     font-weight: 500
     z-index 1
